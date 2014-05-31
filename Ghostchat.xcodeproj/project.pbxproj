@@ -19,6 +19,13 @@
 		143242ED193A57EA0087230F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 143242D5193A57EA0087230F /* UIKit.framework */; };
 		143242F5193A57EA0087230F /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 143242F3193A57EA0087230F /* InfoPlist.strings */; };
 		143242F7193A57EA0087230F /* GhostchatTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 143242F6193A57EA0087230F /* GhostchatTests.m */; };
+		14324301193A58320087230F /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 14324300193A58320087230F /* MainStoryboard.storyboard */; };
+		14324308193A5D050087230F /* friends.png in Resources */ = {isa = PBXBuildFile; fileRef = 14324302193A5D050087230F /* friends.png */; };
+		14324309193A5D050087230F /* camera.png in Resources */ = {isa = PBXBuildFile; fileRef = 14324303193A5D050087230F /* camera.png */; };
+		1432430A193A5D050087230F /* camera@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 14324304193A5D050087230F /* camera@2x.png */; };
+		1432430B193A5D050087230F /* friends@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 14324305193A5D050087230F /* friends@2x.png */; };
+		1432430C193A5D050087230F /* inbox.png in Resources */ = {isa = PBXBuildFile; fileRef = 14324306193A5D050087230F /* inbox.png */; };
+		1432430D193A5D050087230F /* inbox@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 14324307193A5D050087230F /* inbox@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +55,13 @@
 		143242F2193A57EA0087230F /* GhostchatTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GhostchatTests-Info.plist"; sourceTree = "<group>"; };
 		143242F4193A57EA0087230F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		143242F6193A57EA0087230F /* GhostchatTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GhostchatTests.m; sourceTree = "<group>"; };
+		14324300193A58320087230F /* MainStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MainStoryboard.storyboard; sourceTree = "<group>"; };
+		14324302193A5D050087230F /* friends.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = friends.png; sourceTree = "<group>"; };
+		14324303193A5D050087230F /* camera.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = camera.png; sourceTree = "<group>"; };
+		14324304193A5D050087230F /* camera@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "camera@2x.png"; sourceTree = "<group>"; };
+		14324305193A5D050087230F /* friends@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "friends@2x.png"; sourceTree = "<group>"; };
+		14324306193A5D050087230F /* inbox.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = inbox.png; sourceTree = "<group>"; };
+		14324307193A5D050087230F /* inbox@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "inbox@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +91,8 @@
 		143242C5193A57EA0087230F = {
 			isa = PBXGroup;
 			children = (
+				1432430E193A5D0B0087230F /* Images */,
+				14324300193A58320087230F /* MainStoryboard.storyboard */,
 				143242D7193A57EA0087230F /* Ghostchat */,
 				143242F0193A57EA0087230F /* GhostchatTests */,
 				143242D0193A57EA0087230F /* Frameworks */,
@@ -142,6 +158,19 @@
 				143242F3193A57EA0087230F /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		1432430E193A5D0B0087230F /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				14324302193A5D050087230F /* friends.png */,
+				14324303193A5D050087230F /* camera.png */,
+				14324304193A5D050087230F /* camera@2x.png */,
+				14324305193A5D050087230F /* friends@2x.png */,
+				14324306193A5D050087230F /* inbox.png */,
+				14324307193A5D050087230F /* inbox@2x.png */,
+			);
+			name = Images;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -219,8 +248,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				14324301193A58320087230F /* MainStoryboard.storyboard in Resources */,
+				14324308193A5D050087230F /* friends.png in Resources */,
+				1432430B193A5D050087230F /* friends@2x.png in Resources */,
 				143242DC193A57EA0087230F /* InfoPlist.strings in Resources */,
+				1432430C193A5D050087230F /* inbox.png in Resources */,
 				143242E4193A57EA0087230F /* Images.xcassets in Resources */,
+				14324309193A5D050087230F /* camera.png in Resources */,
+				1432430A193A5D050087230F /* camera@2x.png in Resources */,
+				1432430D193A5D050087230F /* inbox@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -361,6 +397,7 @@
 				GCC_PREFIX_HEADER = "Ghostchat/Ghostchat-Prefix.pch";
 				INFOPLIST_FILE = "Ghostchat/Ghostchat-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -374,6 +411,7 @@
 				GCC_PREFIX_HEADER = "Ghostchat/Ghostchat-Prefix.pch";
 				INFOPLIST_FILE = "Ghostchat/Ghostchat-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
