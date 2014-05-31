@@ -1,0 +1,452 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		143242D2193A57EA0087230F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 143242D1193A57EA0087230F /* Foundation.framework */; };
+		143242D4193A57EA0087230F /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 143242D3193A57EA0087230F /* CoreGraphics.framework */; };
+		143242D6193A57EA0087230F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 143242D5193A57EA0087230F /* UIKit.framework */; };
+		143242DC193A57EA0087230F /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 143242DA193A57EA0087230F /* InfoPlist.strings */; };
+		143242DE193A57EA0087230F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 143242DD193A57EA0087230F /* main.m */; };
+		143242E2193A57EA0087230F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 143242E1193A57EA0087230F /* AppDelegate.m */; };
+		143242E4193A57EA0087230F /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 143242E3193A57EA0087230F /* Images.xcassets */; };
+		143242EB193A57EA0087230F /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 143242EA193A57EA0087230F /* XCTest.framework */; };
+		143242EC193A57EA0087230F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 143242D1193A57EA0087230F /* Foundation.framework */; };
+		143242ED193A57EA0087230F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 143242D5193A57EA0087230F /* UIKit.framework */; };
+		143242F5193A57EA0087230F /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 143242F3193A57EA0087230F /* InfoPlist.strings */; };
+		143242F7193A57EA0087230F /* GhostchatTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 143242F6193A57EA0087230F /* GhostchatTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		143242EE193A57EA0087230F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 143242C6193A57EA0087230F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 143242CD193A57EA0087230F;
+			remoteInfo = Ghostchat;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		143242CE193A57EA0087230F /* Ghostchat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Ghostchat.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		143242D1193A57EA0087230F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		143242D3193A57EA0087230F /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		143242D5193A57EA0087230F /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		143242D9193A57EA0087230F /* Ghostchat-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Ghostchat-Info.plist"; sourceTree = "<group>"; };
+		143242DB193A57EA0087230F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		143242DD193A57EA0087230F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		143242DF193A57EA0087230F /* Ghostchat-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Ghostchat-Prefix.pch"; sourceTree = "<group>"; };
+		143242E0193A57EA0087230F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		143242E1193A57EA0087230F /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		143242E3193A57EA0087230F /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		143242E9193A57EA0087230F /* GhostchatTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GhostchatTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		143242EA193A57EA0087230F /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		143242F2193A57EA0087230F /* GhostchatTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GhostchatTests-Info.plist"; sourceTree = "<group>"; };
+		143242F4193A57EA0087230F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		143242F6193A57EA0087230F /* GhostchatTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GhostchatTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		143242CB193A57EA0087230F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				143242D4193A57EA0087230F /* CoreGraphics.framework in Frameworks */,
+				143242D6193A57EA0087230F /* UIKit.framework in Frameworks */,
+				143242D2193A57EA0087230F /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		143242E6193A57EA0087230F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				143242EB193A57EA0087230F /* XCTest.framework in Frameworks */,
+				143242ED193A57EA0087230F /* UIKit.framework in Frameworks */,
+				143242EC193A57EA0087230F /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		143242C5193A57EA0087230F = {
+			isa = PBXGroup;
+			children = (
+				143242D7193A57EA0087230F /* Ghostchat */,
+				143242F0193A57EA0087230F /* GhostchatTests */,
+				143242D0193A57EA0087230F /* Frameworks */,
+				143242CF193A57EA0087230F /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		143242CF193A57EA0087230F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				143242CE193A57EA0087230F /* Ghostchat.app */,
+				143242E9193A57EA0087230F /* GhostchatTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		143242D0193A57EA0087230F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				143242D1193A57EA0087230F /* Foundation.framework */,
+				143242D3193A57EA0087230F /* CoreGraphics.framework */,
+				143242D5193A57EA0087230F /* UIKit.framework */,
+				143242EA193A57EA0087230F /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		143242D7193A57EA0087230F /* Ghostchat */ = {
+			isa = PBXGroup;
+			children = (
+				143242E0193A57EA0087230F /* AppDelegate.h */,
+				143242E1193A57EA0087230F /* AppDelegate.m */,
+				143242E3193A57EA0087230F /* Images.xcassets */,
+				143242D8193A57EA0087230F /* Supporting Files */,
+			);
+			path = Ghostchat;
+			sourceTree = "<group>";
+		};
+		143242D8193A57EA0087230F /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				143242D9193A57EA0087230F /* Ghostchat-Info.plist */,
+				143242DA193A57EA0087230F /* InfoPlist.strings */,
+				143242DD193A57EA0087230F /* main.m */,
+				143242DF193A57EA0087230F /* Ghostchat-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		143242F0193A57EA0087230F /* GhostchatTests */ = {
+			isa = PBXGroup;
+			children = (
+				143242F6193A57EA0087230F /* GhostchatTests.m */,
+				143242F1193A57EA0087230F /* Supporting Files */,
+			);
+			path = GhostchatTests;
+			sourceTree = "<group>";
+		};
+		143242F1193A57EA0087230F /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				143242F2193A57EA0087230F /* GhostchatTests-Info.plist */,
+				143242F3193A57EA0087230F /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		143242CD193A57EA0087230F /* Ghostchat */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 143242FA193A57EA0087230F /* Build configuration list for PBXNativeTarget "Ghostchat" */;
+			buildPhases = (
+				143242CA193A57EA0087230F /* Sources */,
+				143242CB193A57EA0087230F /* Frameworks */,
+				143242CC193A57EA0087230F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Ghostchat;
+			productName = Ghostchat;
+			productReference = 143242CE193A57EA0087230F /* Ghostchat.app */;
+			productType = "com.apple.product-type.application";
+		};
+		143242E8193A57EA0087230F /* GhostchatTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 143242FD193A57EA0087230F /* Build configuration list for PBXNativeTarget "GhostchatTests" */;
+			buildPhases = (
+				143242E5193A57EA0087230F /* Sources */,
+				143242E6193A57EA0087230F /* Frameworks */,
+				143242E7193A57EA0087230F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				143242EF193A57EA0087230F /* PBXTargetDependency */,
+			);
+			name = GhostchatTests;
+			productName = GhostchatTests;
+			productReference = 143242E9193A57EA0087230F /* GhostchatTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		143242C6193A57EA0087230F /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = Cingo;
+				TargetAttributes = {
+					143242E8193A57EA0087230F = {
+						TestTargetID = 143242CD193A57EA0087230F;
+					};
+				};
+			};
+			buildConfigurationList = 143242C9193A57EA0087230F /* Build configuration list for PBXProject "Ghostchat" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 143242C5193A57EA0087230F;
+			productRefGroup = 143242CF193A57EA0087230F /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				143242CD193A57EA0087230F /* Ghostchat */,
+				143242E8193A57EA0087230F /* GhostchatTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		143242CC193A57EA0087230F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				143242DC193A57EA0087230F /* InfoPlist.strings in Resources */,
+				143242E4193A57EA0087230F /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		143242E7193A57EA0087230F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				143242F5193A57EA0087230F /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		143242CA193A57EA0087230F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				143242E2193A57EA0087230F /* AppDelegate.m in Sources */,
+				143242DE193A57EA0087230F /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		143242E5193A57EA0087230F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				143242F7193A57EA0087230F /* GhostchatTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		143242EF193A57EA0087230F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 143242CD193A57EA0087230F /* Ghostchat */;
+			targetProxy = 143242EE193A57EA0087230F /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		143242DA193A57EA0087230F /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				143242DB193A57EA0087230F /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		143242F3193A57EA0087230F /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				143242F4193A57EA0087230F /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		143242F8193A57EA0087230F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		143242F9193A57EA0087230F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		143242FB193A57EA0087230F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Ghostchat/Ghostchat-Prefix.pch";
+				INFOPLIST_FILE = "Ghostchat/Ghostchat-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		143242FC193A57EA0087230F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Ghostchat/Ghostchat-Prefix.pch";
+				INFOPLIST_FILE = "Ghostchat/Ghostchat-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		143242FE193A57EA0087230F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Ghostchat.app/Ghostchat";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Ghostchat/Ghostchat-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "GhostchatTests/GhostchatTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		143242FF193A57EA0087230F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Ghostchat.app/Ghostchat";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Ghostchat/Ghostchat-Prefix.pch";
+				INFOPLIST_FILE = "GhostchatTests/GhostchatTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		143242C9193A57EA0087230F /* Build configuration list for PBXProject "Ghostchat" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				143242F8193A57EA0087230F /* Debug */,
+				143242F9193A57EA0087230F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		143242FA193A57EA0087230F /* Build configuration list for PBXNativeTarget "Ghostchat" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				143242FB193A57EA0087230F /* Debug */,
+				143242FC193A57EA0087230F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		143242FD193A57EA0087230F /* Build configuration list for PBXNativeTarget "GhostchatTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				143242FE193A57EA0087230F /* Debug */,
+				143242FF193A57EA0087230F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 143242C6193A57EA0087230F /* Project object */;
+}
