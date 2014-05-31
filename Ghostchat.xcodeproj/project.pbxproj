@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		142FEC2F193A89C800C660C7 /* parse_credentials.json in Resources */ = {isa = PBXBuildFile; fileRef = 142FEC2E193A89C800C660C7 /* parse_credentials.json */; };
 		143242D2193A57EA0087230F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 143242D1193A57EA0087230F /* Foundation.framework */; };
 		143242D4193A57EA0087230F /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 143242D3193A57EA0087230F /* CoreGraphics.framework */; };
 		143242D6193A57EA0087230F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 143242D5193A57EA0087230F /* UIKit.framework */; };
@@ -27,6 +28,16 @@
 		1432430C193A5D050087230F /* inbox.png in Resources */ = {isa = PBXBuildFile; fileRef = 14324306193A5D050087230F /* inbox.png */; };
 		1432430D193A5D050087230F /* inbox@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 14324307193A5D050087230F /* inbox@2x.png */; };
 		14324311193A67B50087230F /* InboxTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 14324310193A67B50087230F /* InboxTableViewController.m */; };
+		14324313193A812B0087230F /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14324312193A812B0087230F /* Parse.framework */; };
+		1432431D193A81DD0087230F /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14324314193A81DD0087230F /* AudioToolbox.framework */; };
+		1432431E193A81DD0087230F /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14324315193A81DD0087230F /* CFNetwork.framework */; };
+		1432431F193A81DD0087230F /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14324316193A81DD0087230F /* CoreLocation.framework */; };
+		14324320193A81DD0087230F /* libz.1.1.3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 14324317193A81DD0087230F /* libz.1.1.3.dylib */; };
+		14324321193A81DD0087230F /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14324318193A81DD0087230F /* MobileCoreServices.framework */; };
+		14324322193A81DD0087230F /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14324319193A81DD0087230F /* QuartzCore.framework */; };
+		14324323193A81DD0087230F /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1432431A193A81DD0087230F /* Security.framework */; };
+		14324324193A81DD0087230F /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1432431B193A81DD0087230F /* StoreKit.framework */; };
+		14324325193A81DD0087230F /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1432431C193A81DD0087230F /* SystemConfiguration.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +51,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		142FEC2E193A89C800C660C7 /* parse_credentials.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = parse_credentials.json; sourceTree = "<group>"; };
 		143242CE193A57EA0087230F /* Ghostchat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Ghostchat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		143242D1193A57EA0087230F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		143242D3193A57EA0087230F /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -65,6 +77,16 @@
 		14324307193A5D050087230F /* inbox@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "inbox@2x.png"; sourceTree = "<group>"; };
 		1432430F193A67B50087230F /* InboxTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InboxTableViewController.h; sourceTree = "<group>"; };
 		14324310193A67B50087230F /* InboxTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InboxTableViewController.m; sourceTree = "<group>"; };
+		14324312193A812B0087230F /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
+		14324314193A81DD0087230F /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		14324315193A81DD0087230F /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		14324316193A81DD0087230F /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		14324317193A81DD0087230F /* libz.1.1.3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.1.1.3.dylib; path = usr/lib/libz.1.1.3.dylib; sourceTree = SDKROOT; };
+		14324318193A81DD0087230F /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		14324319193A81DD0087230F /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		1432431A193A81DD0087230F /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		1432431B193A81DD0087230F /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		1432431C193A81DD0087230F /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,8 +94,18 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1432431D193A81DD0087230F /* AudioToolbox.framework in Frameworks */,
+				1432431E193A81DD0087230F /* CFNetwork.framework in Frameworks */,
+				1432431F193A81DD0087230F /* CoreLocation.framework in Frameworks */,
+				14324320193A81DD0087230F /* libz.1.1.3.dylib in Frameworks */,
+				14324321193A81DD0087230F /* MobileCoreServices.framework in Frameworks */,
+				14324322193A81DD0087230F /* QuartzCore.framework in Frameworks */,
+				14324323193A81DD0087230F /* Security.framework in Frameworks */,
+				14324324193A81DD0087230F /* StoreKit.framework in Frameworks */,
+				14324325193A81DD0087230F /* SystemConfiguration.framework in Frameworks */,
 				143242D4193A57EA0087230F /* CoreGraphics.framework in Frameworks */,
 				143242D6193A57EA0087230F /* UIKit.framework in Frameworks */,
+				14324313193A812B0087230F /* Parse.framework in Frameworks */,
 				143242D2193A57EA0087230F /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -94,6 +126,7 @@
 		143242C5193A57EA0087230F = {
 			isa = PBXGroup;
 			children = (
+				142FEC2E193A89C800C660C7 /* parse_credentials.json */,
 				1432430E193A5D0B0087230F /* Images */,
 				14324300193A58320087230F /* MainStoryboard.storyboard */,
 				1432430F193A67B50087230F /* InboxTableViewController.h */,
@@ -117,6 +150,16 @@
 		143242D0193A57EA0087230F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				14324314193A81DD0087230F /* AudioToolbox.framework */,
+				14324315193A81DD0087230F /* CFNetwork.framework */,
+				14324316193A81DD0087230F /* CoreLocation.framework */,
+				14324317193A81DD0087230F /* libz.1.1.3.dylib */,
+				14324318193A81DD0087230F /* MobileCoreServices.framework */,
+				14324319193A81DD0087230F /* QuartzCore.framework */,
+				1432431A193A81DD0087230F /* Security.framework */,
+				1432431B193A81DD0087230F /* StoreKit.framework */,
+				1432431C193A81DD0087230F /* SystemConfiguration.framework */,
+				14324312193A812B0087230F /* Parse.framework */,
 				143242D1193A57EA0087230F /* Foundation.framework */,
 				143242D3193A57EA0087230F /* CoreGraphics.framework */,
 				143242D5193A57EA0087230F /* UIKit.framework */,
@@ -253,6 +296,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				142FEC2F193A89C800C660C7 /* parse_credentials.json in Resources */,
 				14324301193A58320087230F /* MainStoryboard.storyboard in Resources */,
 				14324308193A5D050087230F /* friends.png in Resources */,
 				1432430B193A5D050087230F /* friends@2x.png in Resources */,
@@ -399,6 +443,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Ghostchat/Ghostchat-Prefix.pch";
 				INFOPLIST_FILE = "Ghostchat/Ghostchat-Info.plist";
@@ -413,6 +461,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Ghostchat/Ghostchat-Prefix.pch";
 				INFOPLIST_FILE = "Ghostchat/Ghostchat-Info.plist";
@@ -481,6 +533,7 @@
 				143242FC193A57EA0087230F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		143242FD193A57EA0087230F /* Build configuration list for PBXNativeTarget "GhostchatTests" */ = {
 			isa = XCConfigurationList;
@@ -489,6 +542,7 @@
 				143242FF193A57EA0087230F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

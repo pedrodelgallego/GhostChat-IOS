@@ -7,11 +7,17 @@
 //
 
 #import "AppDelegate.h"
+#import <Parse/Parse.h>
 
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    NSDictionary* parseCredentials = [self readCredentialFromJSON:@"parse_credentials"];
+ 
+    [Parse setApplicationId:parseCredentials[@"applicationId"]
+               clientKey:@"clientKey"];
+    
     return YES;
 }
 
@@ -23,7 +29,7 @@
 
 - (void)applicationDidEnterBackground:(UIApplication *)application
 {
-    // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later. 
+    // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later.
     // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
 }
 
@@ -42,4 +48,14 @@
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
 
+#pragma utils
+-(NSDictionary*) readCredentialFromJSON:(NSString *)filename
+{
+    NSString *filePath = [[NSBundle mainBundle] pathForResource:filename ofType:@"json"];
+    NSData *data = [NSData dataWithContentsOfFile:filePath];
+    NSDictionary *dict = [NSJSONSerialization JSONObjectWithData:data
+                                                         options:nil
+                                                           error:nil];
+    return dict;
+}
 @end
