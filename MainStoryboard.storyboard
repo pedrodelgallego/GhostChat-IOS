@@ -105,7 +105,13 @@
                             <outlet property="delegate" destination="hnw-qT-xGH" id="pta-CM-93t"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Inbox" id="atH-TX-6Bg"/>
+                    <navigationItem key="navigationItem" title="Inbox" id="atH-TX-6Bg">
+                        <barButtonItem key="rightBarButtonItem" title="Login" id="QPb-XP-auL">
+                            <connections>
+                                <action selector="logout:" destination="hnw-qT-xGH" id="Pfl-4Q-g6r"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <segue destination="uYR-fA-0dM" kind="push" identifier="showLogin" id="eB6-uM-xti"/>
                     </connections>

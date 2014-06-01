@@ -19,7 +19,14 @@
 {
     [super viewDidLoad];
     
-    [self performSegueWithIdentifier:@"showLogin" sender:self];
+    
+    PFUser *currentUser = [PFUser currentUser];
+    if (currentUser) {
+        NSLog(@"%@", currentUser);
+    } else {
+        [self performSegueWithIdentifier:@"showLogin" sender:self];
+    }
+    
 }
 
 - (void)didReceiveMemoryWarning
@@ -42,5 +49,9 @@
 #warning Incomplete method implementation.
     // Return the number of rows in the section.
     return 0;
+}
+- (IBAction)logout:(id)sender {
+    [PFUser logOut];
+    [self performSegueWithIdentifier:@"showLogin" sender:self];
 }
 @end
