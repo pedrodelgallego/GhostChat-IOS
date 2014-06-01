@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		142FEC2F193A89C800C660C7 /* parse_credentials.json in Resources */ = {isa = PBXBuildFile; fileRef = 142FEC2E193A89C800C660C7 /* parse_credentials.json */; };
+		142FEC35193AB16500C660C7 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 142FEC34193AB16400C660C7 /* LoginViewController.m */; };
+		142FEC38193AB17B00C660C7 /* SignUpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 142FEC37193AB17B00C660C7 /* SignUpViewController.m */; };
 		143242D2193A57EA0087230F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 143242D1193A57EA0087230F /* Foundation.framework */; };
 		143242D4193A57EA0087230F /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 143242D3193A57EA0087230F /* CoreGraphics.framework */; };
 		143242D6193A57EA0087230F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 143242D5193A57EA0087230F /* UIKit.framework */; };
@@ -52,6 +54,10 @@
 
 /* Begin PBXFileReference section */
 		142FEC2E193A89C800C660C7 /* parse_credentials.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = parse_credentials.json; sourceTree = "<group>"; };
+		142FEC33193AB16400C660C7 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
+		142FEC34193AB16400C660C7 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
+		142FEC36193AB17B00C660C7 /* SignUpViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SignUpViewController.h; sourceTree = "<group>"; };
+		142FEC37193AB17B00C660C7 /* SignUpViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SignUpViewController.m; sourceTree = "<group>"; };
 		143242CE193A57EA0087230F /* Ghostchat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Ghostchat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		143242D1193A57EA0087230F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		143242D3193A57EA0087230F /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -129,6 +135,10 @@
 				142FEC2E193A89C800C660C7 /* parse_credentials.json */,
 				1432430E193A5D0B0087230F /* Images */,
 				14324300193A58320087230F /* MainStoryboard.storyboard */,
+				142FEC33193AB16400C660C7 /* LoginViewController.h */,
+				142FEC34193AB16400C660C7 /* LoginViewController.m */,
+				142FEC36193AB17B00C660C7 /* SignUpViewController.h */,
+				142FEC37193AB17B00C660C7 /* SignUpViewController.m */,
 				1432430F193A67B50087230F /* InboxTableViewController.h */,
 				14324310193A67B50087230F /* InboxTableViewController.m */,
 				143242D7193A57EA0087230F /* Ghostchat */,
@@ -324,6 +334,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				142FEC35193AB16500C660C7 /* LoginViewController.m in Sources */,
+				142FEC38193AB17B00C660C7 /* SignUpViewController.m in Sources */,
 				14324311193A67B50087230F /* InboxTableViewController.m in Sources */,
 				143242E2193A57EA0087230F /* AppDelegate.m in Sources */,
 				143242DE193A57EA0087230F /* main.m in Sources */,

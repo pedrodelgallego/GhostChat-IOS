@@ -7,6 +7,7 @@
 //
 
 #import "InboxTableViewController.h"
+#import <Parse/Parse.h>
 
 @interface InboxTableViewController ()
 
@@ -17,6 +18,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
     [self performSegueWithIdentifier:@"showLogin" sender:self];
 }
 

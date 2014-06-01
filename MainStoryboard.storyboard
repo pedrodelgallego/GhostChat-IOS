@@ -8,7 +8,7 @@
         <scene sceneID="NdG-fY-6y2">
             <objects>
                 <tabBarController definesPresentationContext="YES" id="guy-fa-vk6" sceneMemberID="viewController">
-                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <nil key="simulatedBottomBarMetrics"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="vSd-uH-ycH">
                         <rect key="frame" x="129" y="330" width="163" height="49"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
@@ -22,7 +22,7 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aG9-Wr-xxA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-3529" y="615"/>
+            <point key="canvasLocation" x="-3527" y="615"/>
         </scene>
         <!--Table View Controller-->
         <scene sceneID="K0C-dP-6Vu">
@@ -114,10 +114,10 @@
             </objects>
             <point key="canvasLocation" x="-2462" y="-80"/>
         </scene>
-        <!--View Controller - Sign In-->
+        <!--Login View Controller - Sign In-->
         <scene sceneID="Cgc-8q-C9e">
             <objects>
-                <viewController id="uYR-fA-0dM" sceneMemberID="viewController">
+                <viewController id="uYR-fA-0dM" customClass="LoginViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="IGT-fp-AE1"/>
                         <viewControllerLayoutGuide type="bottom" id="8cW-hN-IXn"/>
@@ -162,20 +162,27 @@
                                 <state key="normal" title="Login">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="login:" destination="uYR-fA-0dM" eventType="touchUpInside" id="iB0-OD-qpG"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="Sign In" id="E7C-Up-ltO"/>
+                    <connections>
+                        <outlet property="passwordField" destination="bGn-fb-5zW" id="aAR-D8-uw2"/>
+                        <outlet property="usernameField" destination="lwF-yM-SIm" id="ruM-da-kVc"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XtL-Cz-KqP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-2004" y="-80"/>
         </scene>
-        <!--View Controller - Sign Up-->
+        <!--Sign Up View Controller - Sign Up-->
         <scene sceneID="t6b-WB-CqO">
             <objects>
-                <viewController id="LgM-rO-qsB" sceneMemberID="viewController">
+                <viewController id="LgM-rO-qsB" customClass="SignUpViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="P4i-BC-AcZ"/>
                         <viewControllerLayoutGuide type="bottom" id="TbK-xQ-Y8J"/>
@@ -185,7 +192,7 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iDP-O4-TWm">
-                                <rect key="frame" x="230" y="193" width="70" height="33"/>
+                                <rect key="frame" x="230" y="241" width="70" height="33"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <state key="normal" title="Sign in">
@@ -205,23 +212,37 @@
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="You have an account? " translatesAutoresizingMaskIntoConstraints="NO" id="w1O-xc-mNb">
-                                <rect key="frame" x="57" y="193" width="165" height="33"/>
+                                <rect key="frame" x="57" y="241" width="165" height="33"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xzW-Ug-wRA">
-                                <rect key="frame" x="20" y="162" width="280" height="30"/>
+                                <rect key="frame" x="20" y="210" width="280" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Sign Up">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="signup:" destination="LgM-rO-qsB" eventType="touchUpInside" id="YbU-Q7-ExM"/>
+                                </connections>
                             </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6L3-vf-gmi">
+                                <rect key="frame" x="20" y="162" width="280" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="Sign Up" id="GPa-Hj-1tF"/>
+                    <connections>
+                        <outlet property="emailField" destination="6L3-vf-gmi" id="cCm-Z8-1nk"/>
+                        <outlet property="passwordField" destination="yuh-wN-yF7" id="Ge5-xS-oYz"/>
+                        <outlet property="usernameField" destination="6YX-bo-vhk" id="w2m-3V-bz9"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LIb-tZ-HjH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

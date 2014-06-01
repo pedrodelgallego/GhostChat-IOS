@@ -34,16 +34,37 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
-{
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (IBAction)login:(id)sender {
+    NSString *username = [self.usernameField.text stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
+    
+    NSString *password = [self.passwordField.text stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
+    
+    if ([self isValidForm:username password:password]) {
+        UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"upss"
+                                                            message:@"username, password, and email cannot be blank"
+                                                           delegate:nil
+                                                  cancelButtonTitle:@"Ok"
+                                                  otherButtonTitles:nil, nil];
+        [alertView show];
+    } else {
+        [PFUser logInWithUsernameInBackground:username password:password block:^(PFUser *user, NSError *error) {
+            if(error){
+                UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Sorry"
+                                                                    message:[error.userInfo objectForKey:@"error"]
+                                                                   delegate:nil
+                                                          cancelButtonTitle:@"Ok"
+                                                          otherButtonTitles:nil, nil];
+                [alertView show];
+            } else {
+                [self.navigationController popToRootViewControllerAnimated:YES];
+            }
+        }];
+    }
 }
-*/
 
+
+
+-(BOOL) isValidForm:(NSString*)username password:(NSString*)password {
+    return [username length] == 0 || [password length] == 0;
+}
 @end

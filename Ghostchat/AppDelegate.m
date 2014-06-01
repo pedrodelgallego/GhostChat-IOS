@@ -14,10 +14,10 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     NSDictionary* parseCredentials = [self readCredentialFromJSON:@"parse_credentials"];
- 
+  
     [Parse setApplicationId:parseCredentials[@"applicationId"]
-               clientKey:@"clientKey"];
-    
+                  clientKey:parseCredentials[@"clientKey"]];
+     
     return YES;
 }
 
