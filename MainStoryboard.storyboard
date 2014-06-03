@@ -106,7 +106,7 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Inbox" id="atH-TX-6Bg">
-                        <barButtonItem key="rightBarButtonItem" title="Login" id="QPb-XP-auL">
+                        <barButtonItem key="rightBarButtonItem" title="Log Out" id="QPb-XP-auL">
                             <connections>
                                 <action selector="logout:" destination="hnw-qT-xGH" id="Pfl-4Q-g6r"/>
                             </connections>
