@@ -22,9 +22,9 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aG9-Wr-xxA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-3527" y="615"/>
+            <point key="canvasLocation" x="-3525" y="615"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Table View Controller - Friends-->
         <scene sceneID="K0C-dP-6Vu">
             <objects>
                 <tableViewController id="oxr-X4-Urs" sceneMemberID="viewController">
@@ -47,11 +47,46 @@
                             <outlet property="delegate" destination="oxr-X4-Urs" id="GXc-Mp-tK5"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="yq9-Zn-0dm"/>
+                    <navigationItem key="navigationItem" title="Friends" id="yq9-Zn-0dm">
+                        <barButtonItem key="rightBarButtonItem" title="Edit" id="pFv-Vk-hTH">
+                            <connections>
+                                <segue destination="fiq-DJ-fhf" kind="push" id="1kF-hR-QQY"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nAW-hl-apg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-2462" y="615"/>
+        </scene>
+        <!--Edit Friends Table View Controller - Edit Friends-->
+        <scene sceneID="qIg-1t-481">
+            <objects>
+                <tableViewController id="fiq-DJ-fhf" customClass="EditFriendsTableViewController" sceneMemberID="viewController">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="S13-h7-2qc">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="EditUserCell" id="3FJ-hd-Hv1">
+                                <rect key="frame" x="0.0" y="86" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="3FJ-hd-Hv1" id="CCb-0G-muc">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="fiq-DJ-fhf" id="ZUQ-nM-7mf"/>
+                            <outlet property="delegate" destination="fiq-DJ-fhf" id="IhI-X9-glJ"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Edit Friends" id="22d-wT-An9"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jI5-1N-k8D" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2004" y="615"/>
         </scene>
         <!--Table View Controller-->
         <scene sceneID="w8W-LF-Jbg">
