@@ -7,6 +7,7 @@
 //
 
 #import "CameraTableViewController.h"
+#import <MobileCoreServices/UTCoreTypes.h>
 
 @interface CameraTableViewController ()
 
@@ -26,6 +27,7 @@
     self.imagePicker = [[UIImagePickerController alloc] init];
     self.imagePicker.delegate = self;
     self.imagePicker.allowsEditing = NO;
+    self.imagePicker.videoMaximumDuration = 10;
     
     if ([UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera]){
         self.imagePicker.sourceType = UIImagePickerControllerSourceTypeCamera;
@@ -60,6 +62,24 @@
 {
     [self dismissViewControllerAnimated:NO completion:nil];
     [self.tabBarController setSelectedIndex:0];
+}
+
+-(void) imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info
+{
+    NSString *mediaType = [info objectForKey: UIImagePickerControllerMediaType];
+ 
+    if ([mediaType isEqualToString:(NSString *) kUTTypeImage]){
+        self.image = [info objectForKey:UIImagePickerControllerOriginalImage];
+        if (self.imagePicker.sourceType == UIImagePickerControllerSourceTypeCamera){
+            UIImageWriteToSavedPhotosAlbum(self.image, nil, nil, nil);
+        }
+    } else {
+        self.videoFilePath = (__bridge NSString *)([[info objectForKey:UIImagePickerControllerMediaURL] path]);
+        if (UIVideoAtPathIsCompatibleWithSavedPhotosAlbum(self.videoFilePath)){
+            UISaveVideoAtPathToSavedPhotosAlbum(self.videoFilePath, nil, nil, nil);
+        }
+    }
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 @end
