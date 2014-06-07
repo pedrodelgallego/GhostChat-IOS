@@ -88,10 +88,10 @@
             </objects>
             <point key="canvasLocation" x="-2004" y="615"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Camera Table View Controller-->
         <scene sceneID="w8W-LF-Jbg">
             <objects>
-                <tableViewController id="aZG-KI-QNY" sceneMemberID="viewController">
+                <tableViewController id="aZG-KI-QNY" customClass="CameraTableViewController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="ZDq-8e-Mhi">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
