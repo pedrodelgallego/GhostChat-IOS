@@ -45,13 +45,11 @@
     return [self.allUsers count];
 }
 
-
 - (UITableViewCell *) tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     static NSString *CellIdentifier = @"EditUserCell";
     
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier
                                                             forIndexPath:indexPath];
-    
     PFUser *user = [self.allUsers objectAtIndex:indexPath.row];
     cell.textLabel.text = user.username;
     
@@ -64,28 +62,40 @@
     return cell;
 }
 
-
--(void) tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+-(void) tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
     [self.tableView deselectRowAtIndexPath:indexPath animated:NO];
-    
     UITableViewCell * cell = [self.tableView cellForRowAtIndexPath:indexPath];
-    cell.accessoryType  = UITableViewCellAccessoryCheckmark;
-
+    
     PFRelation *friendsRelation = [self.currentUser relationForKey:@"friendsRelation"];
     PFUser *user = [self.allUsers objectAtIndex:indexPath.row];
     
-    [friendsRelation addObject:user];
+    if ([self isFriend:user]) {
+        cell.accessoryType = UITableViewCellAccessoryNone;
+        for (PFUser *friend in self.friends){
+            if ([friend.objectId isEqualToString:user.objectId]) {
+                [self.friends removeObject:friend];
+                break;
+            }
+        }
+        [friendsRelation removeObject:user];
+    } else {
+        cell.accessoryType = UITableViewCellAccessoryCheckmark;
+        [self.friends addObject:user];
+        [friendsRelation addObject:user];
+    }
+    
     [self.currentUser saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
         if (error){
             NSLog(@"%@ %@", error, error.userInfo);
         }
     }];
+    
 }
 
-
 #pragma mark - Friends
-
--(BOOL) isFriend:(PFUser *)user{
+-(BOOL) isFriend:(PFUser *)user
+{
     for (PFUser *friend in self.friends){
         if ([friend.objectId isEqualToString:user.objectId]) {
             return YES;
@@ -93,6 +103,4 @@
     }
     return NO;
 }
-
-
 @end
