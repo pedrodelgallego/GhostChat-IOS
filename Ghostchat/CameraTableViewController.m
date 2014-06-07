@@ -127,10 +127,55 @@
 
 # pragma mark - Actions
 - (IBAction)cancel:(id)sender {
+    [self reset];
+
+    [self.tabBarController setSelectedIndex:0];
+}
+
+- (IBAction)send:(id)sender {
+    if (self.image != nil && [self.videoFilePath length] == 0){
+        UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Try Again"
+                                                            message:@"Please capture a photo or video"
+                                                           delegate:self
+                                                  cancelButtonTitle:@"OK"
+                                                  otherButtonTitles:nil];
+        [alertView show];
+        [self presentViewController:self.imagePicker animated:NO completion:nil];
+    }
+    else {
+        [self uploadMessage];
+        [self reset];
+        
+        [self.tabBarController setSelectedIndex:0];
+    }
+}
+
+#pragma mark - helpers
+- (void)reset {
     self.videoFilePath = nil;
     self.image = nil;
     [self.recipients removeAllObjects];
+}
 
-    [self.tabBarController setSelectedIndex:0];
+- (void) uploadMessage {
+    if (self.image != nil){
+        UIimage newImage = [self resizeImage:self.image toWidth:320.0f andHeight:480.0f];
+    }
+    // check if image or video
+    // if video compress
+    // upload the file itself
+    // upload the message details
+}
+
+-(UIImage *)resizeImage:(UIImage *)image toWidth:(float)width andHeight:(float)height{
+    CGSize newSize = CGSizeMake(width, height);
+    CGRect newRectangle = CGRectMake(0, 0, width, height);
+    
+    UIGraphicsBeginImageContext(newSize);
+    [self.image drawInRect:newRectangle];
+    UIImage *resizeImage = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    
+    return resizeImage;
 }
 @end

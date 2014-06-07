@@ -117,7 +117,11 @@
                                 <action selector="cancel:" destination="aZG-KI-QNY" id="iib-RK-2ic"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" title="Send" id="u5h-X5-0nv"/>
+                        <barButtonItem key="rightBarButtonItem" title="Send" id="u5h-X5-0nv">
+                            <connections>
+                                <action selector="send:" destination="aZG-KI-QNY" id="rpW-Ra-QDt"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GQJ-UC-uS6" userLabel="First Responder" sceneMemberID="firstResponder"/>
