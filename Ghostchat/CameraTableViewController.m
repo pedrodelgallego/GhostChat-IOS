@@ -26,20 +26,22 @@
 {
     [super viewWillAppear:animated];
 
-    self.imagePicker = [[UIImagePickerController alloc] init];
-    self.imagePicker.delegate = self;
-    self.imagePicker.allowsEditing = NO;
-    self.imagePicker.videoMaximumDuration = 10;
-    
-    if ([UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera]){
-        self.imagePicker.sourceType = UIImagePickerControllerSourceTypeCamera;
-    } else {
-        self.imagePicker.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
+    if (self.image == nil && [self.videoFilePath length] == 0){
+        self.imagePicker = [[UIImagePickerController alloc] init];
+        self.imagePicker.delegate = self;
+        self.imagePicker.allowsEditing = NO;
+        self.imagePicker.videoMaximumDuration = 10;
+        
+        if ([UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera]){
+            self.imagePicker.sourceType = UIImagePickerControllerSourceTypeCamera;
+        } else {
+            self.imagePicker.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
+        }
+        
+        self.imagePicker.mediaTypes = [UIImagePickerController availableMediaTypesForSourceType:self.imagePicker.sourceType];
+        
+        [self presentViewController:self.imagePicker animated:NO completion:nil];
     }
-    
-    self.imagePicker.mediaTypes = [UIImagePickerController availableMediaTypesForSourceType:self.imagePicker.sourceType];
-
-    [self presentViewController:self.imagePicker animated:NO completion:nil];
 
     PFQuery *query = [self.friendsRelation query];
     [query orderByAscending:@"username"];
@@ -133,7 +135,7 @@
 }
 
 - (IBAction)send:(id)sender {
-    if (self.image != nil && [self.videoFilePath length] == 0){
+    if (self.image == nil && [self.videoFilePath length] == 0){
         UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Try Again"
                                                             message:@"Please capture a photo or video"
                                                            delegate:self
@@ -144,9 +146,6 @@
     }
     else {
         [self uploadMessage];
-        [self reset];
-        
-        [self.tabBarController setSelectedIndex:0];
     }
 }
 
@@ -158,13 +157,54 @@
 }
 
 - (void) uploadMessage {
+    NSData *fileData;
+    NSString *fileName;
+    NSString *fileType;
+    
     if (self.image != nil){
-        UIimage newImage = [self resizeImage:self.image toWidth:320.0f andHeight:480.0f];
+        UIImage *newImage = [self resizeImage:self.image toWidth:320.0f andHeight:480.0f];
+        fileData = UIImagePNGRepresentation(newImage);
+        fileName = @"image.png";
+        fileType = @"image";
     }
-    // check if image or video
-    // if video compress
-    // upload the file itself
-    // upload the message details
+    else {
+        fileData = [NSData dataWithContentsOfFile:self.videoFilePath];
+        fileName = @"video.mov";
+        fileType = @"video";
+    }
+    
+    PFFile *file = [PFFile fileWithName:fileName data:fileData];
+    [file saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
+        if (error){
+            UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"An error occurred"
+                                                                message:@"Please try sending your message again"
+                                                               delegate:self
+                                                      cancelButtonTitle:@"OK"
+                                                      otherButtonTitles:nil];
+            [alertView show];
+        } else {
+            PFObject *message = [PFObject objectWithClassName:@"Messages"];
+            [message setObject:file forKey:@"file"];
+            [message setObject:fileType forKey:@"fileType"];
+            [message setObject:self.recipients forKey:@"recipientsIds"];
+            [message setObject:[[PFUser currentUser] objectId] forKey:@"senderId"];
+            [message setObject:[[PFUser currentUser] username] forKey:@"senderName"];
+            
+            [message saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
+                if (error){
+                    UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"An error occurred"
+                                                                        message:@"Please try sending your message again"
+                                                                       delegate:self
+                                                              cancelButtonTitle:@"OK"
+                                                              otherButtonTitles:nil];
+                    [alertView show];
+                } else  {
+                    [self reset];
+                    [self.tabBarController setSelectedIndex:0];
+                }
+            }];
+        }
+    }];
 }
 
 -(UIImage *)resizeImage:(UIImage *)image toWidth:(float)width andHeight:(float)height{
