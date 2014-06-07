@@ -20,7 +20,10 @@
     
     [super viewDidLoad];
     self.friendsRelation = [[PFUser currentUser] objectForKey:@"friendsRelation"];
-    
+}
+
+-(void) viewWillAppear:(BOOL)animated
+{
     PFQuery *query = [self.friendsRelation query];
     [query orderByAscending:@"username"];
     
