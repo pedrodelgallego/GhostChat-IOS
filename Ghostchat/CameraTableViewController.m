@@ -94,10 +94,10 @@
     PFUser *user = [self.friends objectAtIndex:indexPath.row];
 
     if (cell.accessoryType == UITableViewCellAccessoryCheckmark){
-        [self.recipients addObject:user.objectId];
+        [self.recipients removeObject:user.objectId];
         cell.accessoryType = UITableViewCellAccessoryNone;
     } else {
-        [self.recipients removeObject:user.objectId];
+        [self.recipients addObject:user.objectId];
         cell.accessoryType = UITableViewCellAccessoryCheckmark;
     }
 }
@@ -186,7 +186,7 @@
             PFObject *message = [PFObject objectWithClassName:@"Messages"];
             [message setObject:file forKey:@"file"];
             [message setObject:fileType forKey:@"fileType"];
-            [message setObject:self.recipients forKey:@"recipientsIds"];
+            [message setObject:self.recipients forKey:@"recipientIds"];
             [message setObject:[[PFUser currentUser] objectId] forKey:@"senderId"];
             [message setObject:[[PFUser currentUser] username] forKey:@"senderName"];
             
@@ -199,8 +199,8 @@
                                                               otherButtonTitles:nil];
                     [alertView show];
                 } else  {
-                    [self reset];
                     [self.tabBarController setSelectedIndex:0];
+                   // [self reset];
                 }
             }];
         }
