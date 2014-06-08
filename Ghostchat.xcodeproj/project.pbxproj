@@ -42,6 +42,11 @@
 		14324325193A81DD0087230F /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1432431C193A81DD0087230F /* SystemConfiguration.framework */; };
 		146A327B19425EE800691F70 /* FriendsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 146A327A19425EE800691F70 /* FriendsTableViewController.m */; };
 		146A327E1943539100691F70 /* CameraTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 146A327D1943539100691F70 /* CameraTableViewController.m */; };
+		14D0DD191944FDC900430268 /* icon_image.png in Resources */ = {isa = PBXBuildFile; fileRef = 14D0DD151944FDC900430268 /* icon_image.png */; };
+		14D0DD1A1944FDC900430268 /* icon_image@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 14D0DD161944FDC900430268 /* icon_image@2x.png */; };
+		14D0DD1B1944FDC900430268 /* icon_video@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 14D0DD171944FDC900430268 /* icon_video@2x.png */; };
+		14D0DD1C1944FDC900430268 /* icon_video.png in Resources */ = {isa = PBXBuildFile; fileRef = 14D0DD181944FDC900430268 /* icon_video.png */; };
+		14D0DD1F1944FFE700430268 /* ImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 14D0DD1E1944FFE700430268 /* ImageViewController.m */; };
 		14F11749193FD43B0050B551 /* EditFriendsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 14F11748193FD43B0050B551 /* EditFriendsTableViewController.m */; };
 /* End PBXBuildFile section */
 
@@ -100,6 +105,12 @@
 		146A327A19425EE800691F70 /* FriendsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FriendsTableViewController.m; path = ../FriendsTableViewController.m; sourceTree = "<group>"; };
 		146A327C1943539100691F70 /* CameraTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CameraTableViewController.h; sourceTree = "<group>"; };
 		146A327D1943539100691F70 /* CameraTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CameraTableViewController.m; sourceTree = "<group>"; };
+		14D0DD151944FDC900430268 /* icon_image.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_image.png; sourceTree = "<group>"; };
+		14D0DD161944FDC900430268 /* icon_image@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_image@2x.png"; sourceTree = "<group>"; };
+		14D0DD171944FDC900430268 /* icon_video@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_video@2x.png"; sourceTree = "<group>"; };
+		14D0DD181944FDC900430268 /* icon_video.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_video.png; sourceTree = "<group>"; };
+		14D0DD1D1944FFE700430268 /* ImageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageViewController.h; sourceTree = "<group>"; };
+		14D0DD1E1944FFE700430268 /* ImageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageViewController.m; sourceTree = "<group>"; };
 		14F11747193FD43B0050B551 /* EditFriendsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EditFriendsTableViewController.h; path = ../EditFriendsTableViewController.h; sourceTree = "<group>"; };
 		14F11748193FD43B0050B551 /* EditFriendsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EditFriendsTableViewController.m; path = ../EditFriendsTableViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -184,6 +195,8 @@
 			isa = PBXGroup;
 			children = (
 				14324300193A58320087230F /* MainStoryboard.storyboard */,
+				14D0DD1D1944FFE700430268 /* ImageViewController.h */,
+				14D0DD1E1944FFE700430268 /* ImageViewController.m */,
 				146A327919425EE800691F70 /* FriendsTableViewController.h */,
 				146A327A19425EE800691F70 /* FriendsTableViewController.m */,
 				14F11747193FD43B0050B551 /* EditFriendsTableViewController.h */,
@@ -236,6 +249,10 @@
 		1432430E193A5D0B0087230F /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				14D0DD151944FDC900430268 /* icon_image.png */,
+				14D0DD161944FDC900430268 /* icon_image@2x.png */,
+				14D0DD171944FDC900430268 /* icon_video@2x.png */,
+				14D0DD181944FDC900430268 /* icon_video.png */,
 				14324302193A5D050087230F /* friends.png */,
 				14324303193A5D050087230F /* camera.png */,
 				14324304193A5D050087230F /* camera@2x.png */,
@@ -323,6 +340,7 @@
 			files = (
 				142FEC2F193A89C800C660C7 /* parse_credentials.json in Resources */,
 				14324301193A58320087230F /* MainStoryboard.storyboard in Resources */,
+				14D0DD1C1944FDC900430268 /* icon_video.png in Resources */,
 				14324308193A5D050087230F /* friends.png in Resources */,
 				1432430B193A5D050087230F /* friends@2x.png in Resources */,
 				143242DC193A57EA0087230F /* InfoPlist.strings in Resources */,
@@ -330,7 +348,10 @@
 				143242E4193A57EA0087230F /* Images.xcassets in Resources */,
 				14324309193A5D050087230F /* camera.png in Resources */,
 				1432430A193A5D050087230F /* camera@2x.png in Resources */,
+				14D0DD1A1944FDC900430268 /* icon_image@2x.png in Resources */,
+				14D0DD191944FDC900430268 /* icon_image.png in Resources */,
 				1432430D193A5D050087230F /* inbox@2x.png in Resources */,
+				14D0DD1B1944FDC900430268 /* icon_video@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -355,6 +376,7 @@
 				14324311193A67B50087230F /* InboxTableViewController.m in Sources */,
 				143242E2193A57EA0087230F /* AppDelegate.m in Sources */,
 				146A327B19425EE800691F70 /* FriendsTableViewController.m in Sources */,
+				14D0DD1F1944FFE700430268 /* ImageViewController.m in Sources */,
 				146A327E1943539100691F70 /* CameraTableViewController.m in Sources */,
 				143242DE193A57EA0087230F /* main.m in Sources */,
 			);

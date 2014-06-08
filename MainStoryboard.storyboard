@@ -128,6 +128,34 @@
             </objects>
             <point key="canvasLocation" x="-2478" y="1323"/>
         </scene>
+        <!--Image View Controller-->
+        <scene sceneID="jS5-pR-gh3">
+            <objects>
+                <viewController id="ZOI-Sd-cUi" customClass="ImageViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="us5-s8-jeC"/>
+                        <viewControllerLayoutGuide type="bottom" id="397-qQ-Eu8"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Nss-F8-1lj">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Zkt-ho-u2h">
+                                <rect key="frame" x="0.0" y="63" width="320" height="568"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="UoL-wc-63s"/>
+                    <connections>
+                        <outlet property="imageView" destination="Zkt-ho-u2h" id="EKR-FO-PyI"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zHp-u7-v0f" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2004" y="-759"/>
+        </scene>
         <!--Inbox Table View Controller - Inbox-->
         <scene sceneID="x5X-eT-fWQ">
             <objects>
@@ -160,6 +188,7 @@
                     </navigationItem>
                     <connections>
                         <segue destination="uYR-fA-0dM" kind="push" identifier="showLogin" id="eB6-uM-xti"/>
+                        <segue destination="ZOI-Sd-cUi" kind="push" identifier="showImage" id="NzC-6i-2JP"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="24M-7z-Qwk" userLabel="First Responder" sceneMemberID="firstResponder"/>
