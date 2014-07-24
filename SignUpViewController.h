@@ -15,4 +15,6 @@
 
 - (IBAction)signup:(id)sender;
 
+- (IBAction)dismiss:(id)sender;
+
 @end

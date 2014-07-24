@@ -51,8 +51,10 @@
             }
         }];
     }
-    
-    
+}
+
+- (IBAction)dismiss:(id)sender {
+    [self.navigationController popToRootViewControllerAnimated:YES];
 }
 
 -(BOOL) isValidForm:(NSString*)username password:(NSString*)password email:(NSString*)email{
